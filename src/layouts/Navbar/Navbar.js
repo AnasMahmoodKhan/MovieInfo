@@ -1,50 +1,28 @@
 import React from "react";
-import { withStyles } from "@material-ui/core/styles";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
-import IconButton from "@material-ui/core/IconButton";
-import MenuIcon from "@material-ui/icons/Menu";
-import NavbarCollapse from "./NavbarCollapse";
+import { Link } from "react-router-dom";
 
-const styles = {
-  root: {
-    flexGrow: 1,
-  },
-  grow: {
-    flexGrow: 1,
-  },
-  menuButton: {
-    marginLeft: -12,
-    marginRight: 20,
-  },
-  navigation: {},
-  toggleDrawer: {},
-  appTitle: {},
-};
-
-function Navbar({ classes }) {
+function Navbar() {
   return (
-    <AppBar position="fixed" className={classes.navigation}>
-      <Toolbar>
-        <IconButton
-          color="inherit"
-          aria-label="Menu"
-          className={classes.toggleDrawer}
-        >
-          <MenuIcon />
-        </IconButton>
-        <Typography
-          variant="title"
-          color="inherit"
-          className={classes.appTitle}
-        >
-          MovieInfo App
-        </Typography>
-        <NavbarCollapse />
-      </Toolbar>
-    </AppBar>
+    <div>
+      <nav className="navbar navbar-light bg-dark mb-5">
+        <div className="container">
+          <div className="navbar-header">
+            <a className="navbar-brand text-white text-lg brand-text" href="/">
+              MovieSeriesInfo
+            </a>
+          </div>
+          <ul className="navbar-nav ml-auto text-light d-inline-block">
+            <li className="nav-item d-inline-block mr-4">
+              <i className="fab fa-imdb fa-5x" id="imdb-logo" />
+            </li>
+            <li className="nav-item d-inline-block mr-4">
+              <i className="fab fa-react fa-5x" id="react-logo" />
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
   );
 }
 
-export default withStyles(styles)(Navbar);
+export default Navbar;
