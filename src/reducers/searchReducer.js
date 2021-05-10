@@ -8,7 +8,7 @@ import {
 const initialState = {
   text: "",
   movies: [],
-  loading: false,
+  loading: true,
   movie: [],
 };
 
