@@ -5,7 +5,7 @@ function Footer() {
     <div>
       <div
         className="row"
-        style={{ bottom: 0, position: "absolute", width: "107%" }}
+        
       >
         <div className="col-md-12">
           <div className="footer p-3 mt-4 text-center bg-dark text-light">

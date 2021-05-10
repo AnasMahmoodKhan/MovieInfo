@@ -1,13 +1,14 @@
 import React from "react";
 import { connect } from "react-redux";
 import Spinner from "../layouts/Spinner";
+import MoviesContainer from "./MoviesContainer";
 import Search from "./Search";
 
 const Landing = ({ loading }) => {
   return (
     <div className="container">
       <Search />
-      {loading ? <Spinner /> : null}
+      {loading ? <Spinner /> : <MoviesContainer />}
     </div>
   );
 };
